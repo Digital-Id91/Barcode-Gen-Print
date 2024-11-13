@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Print Barcode</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      width: 450px;
+    }
+    #barcodeContainer {
+      margin-top: 20px;
+    }
+    #barcode, #barcode2 {
+      display: block;
+      margin: 10px auto;
+    }
+    #selectedText, #secondBarcodeText {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    #memoField, #secondBarcodeField {
+      width: 100%;
+      margin-top: 10px;
+      padding: 8px;
+      font-size: 14px;
+      resize: vertical;
+    }
+    #printButton {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="barcodeContainer">
+    <!-- First Barcode and Selected Text -->
+    <canvas id="barcode"></canvas>
+    <p id="selectedText"></p>
+  </div>
+  
+  <!-- Input field for second barcode value and display area -->
+  <input type="text" id="secondBarcodeField" placeholder="Enter second barcode value if needed">
+  <canvas id="barcode2"></canvas>
+  <p id="secondBarcodeText"></p> <!-- Display for second barcode value -->
+
+  <!-- Memo Field -->
+  <textarea id="memoField" placeholder="Enter memo"></textarea>
+  <button id="printButton">PRINT</button>
+
+  <!-- Include the JsBarcode library and the popup script -->
+  <script src="libs/JsBarcode.all.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Print Barcode",
+    "version": "1.0",
+    "description": "Generate a CODE-128 barcode from highlighted text and print it with a memo.",
+    "permissions": ["contextMenus", "activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
